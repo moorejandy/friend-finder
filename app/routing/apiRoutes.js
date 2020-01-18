@@ -32,7 +32,8 @@ for (var i =0; i < friends.length; i++){
         currentFriendScore = currentFriend.scores[j];
         var currentUserScore = userScores[j];
 
-        totalDifference += Math.abs(currentUserScore - currentFriendScore);
+        totalDifference += Math.abs(currentUserScore - currentFriendScore)
+        // console.log(totalDifference);
     }
 
     if (totalDifference <= bestMatch.difference){
@@ -43,8 +44,9 @@ for (var i =0; i < friends.length; i++){
     }
 }
 
+friends.push(newFriend);
 res.json(bestMatch);
 
-    })
+    });
 
 }
